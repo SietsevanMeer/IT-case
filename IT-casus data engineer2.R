@@ -189,7 +189,7 @@ Snelle_kwartaalmutatie_functie <- function(category, start_period, end_period) {
 
 
 # Voorbeeld voor het gebruiken van de code, note we kunnen zowel namen gebruiken als codes. 
-#Dus "CPI012220" / "Frisdranken" of "CPI073320" / "International flights"
+#Dus "CPI012220" / "Frisdranken" of "CPI073320" / "Internationale vluchten"
 Snelle_kwartaalmutatie_functie("Internationale vluchten", "2023-08-21", "2024-12-24")
 
 
