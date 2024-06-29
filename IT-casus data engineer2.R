@@ -25,6 +25,8 @@ library(tidyr) #Voor long-format, nodig om twee lijnen te plotten.
 library(ggthemes) #Voor economist theme
 library(DBI)
 library(RPostgres)
+library(knitr)
+
 
 
 #PostgreSQL verbinding
@@ -192,6 +194,13 @@ Snelle_kwartaalmutatie_functie <- function(category, start_period, end_period) {
 #Dus "CPI012220" / "Frisdranken" of "CPI073320" / "Internationale vluchten"
 Snelle_kwartaalmutatie_functie("Internationale vluchten", "2023-08-21", "2024-12-24")
 
+
+#Output as table
+data_for_table <- Snelle_kwartaalmutatie_functie("Internationale vluchten", "2023-08-21", "2024-12-24")
+kable(data_for_table, format = "markdown")
+
+# Writes data to a CSV file and downloads the file as "output_data.csv"
+#write.csv(data_for_table, "output_data.csv", row.names = FALSE)
 
 --------------
 
