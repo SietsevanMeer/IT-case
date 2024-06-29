@@ -90,7 +90,16 @@ Snelle_kwartaalmutatie_functie("CPI012220", "01-2014", "07-2019")
 | CPI073320             | 2024 Q1  | -6.87                   | -8.21                             |
 | CPI073320             | 2024 Q2  | 24.4                    | 24.6                              |
 
+U kunt deze tabel reproduceren via R code: 
+```{r}
+data_for_table <- Snelle_kwartaalmutatie_functie("Internationale vluchten", "2023-08-21", "2024-12-24")
+kable(data_for_table, format = "markdown")
+```
 
+U kunt ook de data uit de tabel als CSV downloaden met de functie:
+```{r}
+write.csv(data_for_table, "output_data.csv", row.names = FALSE)
+```
 
 ## 5. Visualisatie
 
